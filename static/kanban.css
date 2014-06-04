@@ -1,0 +1,22 @@
+#kanban_table {
+	width: 100%;
+	height: 100%;
+}
+
+#kanban_table_header {
+	height: 10%;
+}
+
+#postit_master {
+	display: none;
+}
+
+.kanban_col {
+	width: 33%;
+}
+
+.postit {
+	width: 10%;
+	height: 10%;
+	background-color: pink;
+}
