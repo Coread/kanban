@@ -3,17 +3,20 @@
 <head>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="/static/kanban.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="/static/kanban.css" type="text/css">
 	<link rel="stylesheet" href="/static/css/font-awesome.css" type="text/css">​
 	<title>
 		{{name}}'s Kanban
 	</title>
 </head>
-
+<body oncontextmenu="return false;">
 <div id="postit_master" class="postit">
-	<div class="fa fa-times close_icon">
+    <div class="postit_header">
+        <div class="fa fa-times close_icon"></div>
+        <div> Task Num</div>
 	</div>
-	<div contenteditable="true">
+	<div class="postit_content" contenteditable="true">
 		Enter Text Here
 	</div>
 </div>
@@ -34,3 +37,4 @@ NUMBER_ISSUES = {{number_issues}}
     	<td class="kanban_col" id="col_done"></td>
     </tr>
 </table>
+</body>

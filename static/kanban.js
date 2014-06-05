@@ -21,6 +21,9 @@ $('.kanban_col').mousedown(function(e) {
 		new_postit.remove()
 		console.log("finished")
 	})
+    
+    new_postit.draggable()
+    
 	NUMBER_ISSUES+=1
 	$(this).append(
 		new_postit		

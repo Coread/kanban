@@ -16,7 +16,11 @@
 }
 
 .postit {
-	width: 10%;
-	height: 10%;
+	width: 35%;
+	height: 15%;
 	background-color: pink;
+}
+
+.postit_header {
+    display: inline-block;
 }
