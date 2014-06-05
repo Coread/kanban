@@ -7,7 +7,7 @@
 	height: 10%;
 }
 
-#postit_master {
+#postit_master, #postit_master_tracker {
 	display: none;
 }
 

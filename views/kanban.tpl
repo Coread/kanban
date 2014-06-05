@@ -10,7 +10,7 @@
 		{{name}}'s Kanban
 	</title>
 </head>
-<body oncontextmenu="return false;">
+//<body oncontextsmenu="return false;">
 <div id="postit_master" class="postit">
     <div class="postit_header">
         <div class="fa fa-times close_icon"></div>
@@ -21,8 +21,24 @@
 	</div>
 </div>
 
+<div id="postit_master_tracker" class="postit">
+    <div class="postit_header">
+        <div class="priority"></div>
+        <div class="project"></div>
+        <div class="author"></div>
+        <div class="assigned_to"></div>
+        <div class="title"></div>
+	</div>
+	<div class="postit_content" contenteditable="true">
+		Enter Text Here
+	</div>
+</div>
+
 <script>
 NUMBER_ISSUES = {{number_issues}}
+OPERATION_MODE = "{{operation_mode}}"
+ISSUES = "{{issues}}"
+NAME = "{{name}}"
 </script>
 
 <table id="kanban_table">
