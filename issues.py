@@ -22,6 +22,9 @@ COLUMN_STATE_MAP = {
 WEEK_SECONDS = 60 * 60 * 24 * 7
 
 
+CACHE = {}
+
+
 def issue(redmine_issue):
 
     then = redmine_issue.updated_on
@@ -46,15 +49,25 @@ def issue(redmine_issue):
 
 def get_issues(project_names):
     issues = []
+    now = datetime.now()
 
     for project_name in project_names:
-        print project_name
+        if project_name in CACHE:
+            then, project_issues = CACHE[project_name]
+            if (now - then).total_seconds() < 60:
+                issues.extend(project_issues)
+                print "using cache for {}".format(project_name)
+                continue
+
         project = server.projects.get(project_name)
         project_issues = []
         for i in project.issues(status_id='*'):
             i_data = issue(i)
-            if i:
+            if i_data:
                 project_issues.append(i_data)
+
+        CACHE[project_name] = (now, project_issues)
+
         issues.extend(project_issues)
 
     return issues
