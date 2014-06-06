@@ -10,7 +10,7 @@
 		{{name}}'s Kanban
 	</title>
 </head>
-//<body oncontextsmenu="return false;">
+
 <div id="postit_master" class="postit">
     <div class="postit_header">
         <div class="fa fa-times close_icon"></div>

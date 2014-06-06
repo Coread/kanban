@@ -17,10 +17,15 @@
 
 .postit {
 	width: 35%;
-	height: 15%;
+	//height: 15%;
 	background-color: pink;
+	float: left;
 }
 
 .postit_header {
     display: inline-block;
 }
+
+.author, .priority, .assigned_to {
+    display: none;
+} 
