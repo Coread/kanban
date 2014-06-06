@@ -10,6 +10,8 @@ COLUMN_STATE_MAP = {
     'Closed': 'col_done',
     'Feedback': 'col_done',
     'Verify': 'col_done',
+    'Needs Release': 'col_done',
+    'In Progress': 'col_inprogress',
     }
 
 

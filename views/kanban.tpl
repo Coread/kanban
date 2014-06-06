@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div id="postit_master_tracker" class="postit">
+<a id="postit_master_tracker" class="postit">
     <div class="postit_header">
         <div class="priority"></div>
         <div class="project"></div>
@@ -32,13 +32,14 @@
 	<div class="postit_content" contenteditable="true">
 		Enter Text Here
 	</div>
-</div>
+</a>
 
 <script>
 NUMBER_ISSUES = {{number_issues}}
 OPERATION_MODE = "{{operation_mode}}"
 ISSUES = "{{issues}}"
 NAME = "{{name}}"
+SITE_BASE_URL = "{{site_url}}"
 </script>
 
 <table id="kanban_table">
