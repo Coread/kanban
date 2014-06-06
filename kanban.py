@@ -12,14 +12,9 @@ def index(name):
     if OPERATION_MODE == "standalone":
         return template('kanban', name=name, number_issues=number_issues)
     elif OPERATION_MODE == "tracker":
-
-        issues = get_issues([name])
-
         return template(
             'kanban',
             name=name,
-            issues=issues,
-            number_issues=len(issues),
             operation_mode=OPERATION_MODE,
             site_url=server['url']
         )
@@ -27,8 +22,9 @@ def index(name):
 
 @post('/issues')
 def issues():
-    project_name = request.POST.get('project_name')
-    issues = get_issues([project_name])
+    project_names = request.POST.get('project_names')
+    project_names = json.loads(project_names)
+    issues = get_issues(project_names)
     return json.dumps(issues)
 
 

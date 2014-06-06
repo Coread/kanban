@@ -34,7 +34,7 @@ if (OPERATION_MODE=="standalone") {
 }
 
 if (OPERATION_MODE=="tracker") {
-	$.post('/issues',{'project_name':NAME}, function(data){
+	$.post('/issues',{'project_names':JSON.stringify(NAME.split('|'))}, function(data){
 		data = ($.parseJSON(data))
 		$.each(data, function(e, issue){
 			console.log(issue)

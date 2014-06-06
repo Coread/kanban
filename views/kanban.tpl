@@ -35,9 +35,7 @@
 </a>
 
 <script>
-NUMBER_ISSUES = {{number_issues}}
 OPERATION_MODE = "{{operation_mode}}"
-ISSUES = "{{issues}}"
 NAME = "{{name}}"
 SITE_BASE_URL = "{{site_url}}"
 </script>

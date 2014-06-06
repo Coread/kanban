@@ -20,6 +20,9 @@
 	//height: 15%;
 	background-color: pink;
 	float: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
 }
 
 .postit_header {
