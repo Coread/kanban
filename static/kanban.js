@@ -45,7 +45,7 @@ if (OPERATION_MODE=="tracker") {
 			new_postit.find('.author').text("author: " + issue.author)
 			new_postit.find('.assigned_to').text("assigned: " + issue.assigned_to)
 			new_postit.find('.priority').text("priority: " + issue.priority)
-			new_postit.find('.project').text(issue.project + ':')
+			//new_postit.find('.project').text(issue.project + ':')
 			new_postit.attr("href", SITE_BASE_URL + '/issues/' + issue.id)
 			var col = $('#' + issue.col)
 			$(col).append(new_postit)
