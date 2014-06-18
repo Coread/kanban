@@ -5,7 +5,10 @@
 	<script src="/static/kanban.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="/static/kanban.css" type="text/css">
-	<link rel="stylesheet" href="/static/css/font-awesome.css" type="text/css">​
+	<link rel="stylesheet" href="/static/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <script src="/static/js/bootstrap.min.js"></script>​
 	<title>
 		{{name}}'s Kanban
 	</title>
@@ -21,7 +24,7 @@
 	</div>
 </div>
 
-<a id="postit_master_tracker" class="postit">
+<a id="postit_master_tracker" class="postit img-rounded">
     <div class="postit_header">
         <div class="priority"></div>
         <div class="project"></div>
